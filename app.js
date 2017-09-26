@@ -4,6 +4,7 @@ var mongoose = require("mongoose");
 var passport = require("passport");
 var localStrategy = require("passport-local");
 var User = require("./models/user");
+var port = process.env.PORT || 3000;
 var app = express();
 
 mongoose.Promise = Promise;
@@ -52,6 +53,6 @@ app.get("/alvaro", (req, res) => {
   res.render("content");
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server started");
 });
