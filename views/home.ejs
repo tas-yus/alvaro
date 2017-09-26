@@ -1,0 +1,44 @@
+<% include partials/header %>
+
+<div class="jumbotron" id="main">
+  <div class="container">
+    <h1>Hi Alvaro!</h1>
+    <a class="btn btn-lg btn-danger" data-toggle="modal" data-target="#myModal">Click to see the secrets</a>
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Too easy, innit?</h4>
+          <p>Type the password if you want to see it</p>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+           <form action="/login" method="POST" id="regular-form">
+              <input type="hidden" name="username" value="Alvaro" class="form-control" placeholder="password">
+              <div class="form-group">
+                  <input type="password" name="password" class="form-control" placeholder="password">
+              </div>
+              <div class="form-group">
+                  <button class="btn btn-primary btn-block">Enter</button>
+              </div>
+          </form>
+          </div>
+        </div>
+        <div>
+            <p><strong>Hint: </strong></p>
+            <ol>
+              <li>You and I both know this!</li>
+              <li>It consists of 2 sets of numbers like 345345 for example</li>
+              <li>It was a code to your secret, but it is now the code to my secret!</li>
+              <li>Ask Tas if you don't know (Are you really doing this? You suck bro!)</li>
+            </ol>
+          </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</div>
+
+<% include partials/footer %>
